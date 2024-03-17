@@ -9,7 +9,7 @@ echo "enter your number"
 read NUMBER
 if [ $NUMBER -ge 50  ]
 then
-echo "Your printed number is $NUMBER and it is greater than 50 and final result is $G GREAT SUCCESS $N "
+echo -e "Your printed number is $NUMBER and it is greater than 50 and final result is $G GREAT SUCCESS $N "
 else
-echo "Your printed number is $NUMBER and it is NOT greater than 50 and final result is $R LESS Failure $N "
+echo -e "Your printed number is $NUMBER and it is NOT greater than 50 and final result is $R LESS Failure $N "
 fi
