@@ -1,22 +1,19 @@
-#this is to install mysql in this PC with authorised root user
-#!/bin/bash
-#$ID=$(id -u)
-#COMPUTER=$(hostname)
-#if [ $ID -eq 0 ]
-#then
-#yum install mysql -y
-#else
-#echo "your not priviledged user to install softwares on this computer $COMPUTER"
-#exit 1
-#fi
-
-#this is to install mysql in this PC with authorised root user
+this is to install mysql in this PC with authorised root user
 #!/bin/bash
 $ID=$(id -u)
 COMPUTER=$(hostname)
-while [ $ID -eq 0 ];
-do
+if [ $ID -ne 0 ]
+then
+echo "your not priviledged user to install softwares on this computer $COMPUTER"
+exit 1
+else
+echo "your a root user hence proceeding with installtion"
+fi
 yum install mysql -y
-done
+if [ $? -eq 0 ]
+then
 echo "install is success"
+else 
+echo "install is failure"
+fi
 
