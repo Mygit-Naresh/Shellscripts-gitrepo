@@ -1,6 +1,6 @@
-this is to install mysql in this PC with authorised root user
+#this is to install mysql in this PC with authorised root user
 #!/bin/bash
-$ID=$(id -u)
+ID=$(id -u)
 COMPUTER=$(hostname)
 if [ $ID -ne 0 ]
 then
