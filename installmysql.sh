@@ -19,8 +19,8 @@ fi
 yum install git -y
 if [ $? -eq 0 ]
 then
-echo "install is success"
+echo "\e[32m install is success \e[0m "
 else 
-echo "install is failure"
+echo -e "\e[31m install is failure \e[0m"
 fi
 
