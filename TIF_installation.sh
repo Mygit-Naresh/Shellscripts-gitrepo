@@ -10,5 +10,24 @@ else
         else
         echo -e "\e[31m package installation failure please check the provided package name \e[0m"
         fi
+        elif [ $1 = "status" ]; then
+    read -p "please provide the package name to get the status " pkg_name
+    pkg_stat=$(systemctl status ${pkg_name} | head -3 | tail -1 | cut -d ":" -f 2 | cut -d " " -f 2)
+        if [ $pkg_stat = "inactive" ]; then
+        read -p "present package state is ${pkg_stat} do you want to start it: please mention y/n " response
+            if [ $response = "y" ]; then
+            sudo systemctl start ${pkg_name} > /tmp/sucess.log 2> /tmp/failure.log
+            echo "${pkg_name} service is ${pkg_stat}"
+            else
+            echo "exiting from wizard"
+            fi
+        else
+        echo "${pkg_name} service is ${pkg_stat}"
         fi
-        fi
+    else
+    echo -e "\e[31m please provide the valid option as below \n install \n remove \n status \e[0m"
+    fi
+fi
+
+
+        
