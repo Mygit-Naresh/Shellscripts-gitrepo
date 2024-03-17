@@ -18,8 +18,5 @@ while [ $ID -eq 0 ];
 do
 yum install mysql -y
 done
-while [ $ID -ne 0 ];
-do
-echo "echo "your not priviledged user to install softwares on this computer $COMPUTER"
-exit 1
-done
+echo "install is success"
+
