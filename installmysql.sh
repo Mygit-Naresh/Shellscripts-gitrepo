@@ -9,7 +9,14 @@ exit 1
 else
 echo "your a root user hence proceeding with installtion"
 fi
-yum install mysqlfff -y
+yum install mysql -y
+if [ $? -eq 0 ]
+then
+echo "install is success"
+else 
+echo "install is failure"
+fi
+yum install git -y
 if [ $? -eq 0 ]
 then
 echo "install is success"
