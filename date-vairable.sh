@@ -1,4 +1,4 @@
 #!/bin/bash
 DATE=$(date)
 
-echo "$DATE"
+echo "My custom script date is $DATE"
