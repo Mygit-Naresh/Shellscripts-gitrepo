@@ -7,4 +7,5 @@ then
 yum install mysql -y
 else
 echo "your not priviledged user to install softwares on this $COMPUTER"
+EXIT 1
 fi
