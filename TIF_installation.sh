@@ -10,3 +10,5 @@ else
         else
         echo -e "\e[31m package installation failure please check the provided package name \e[0m"
         fi
+        fi
+        fi
