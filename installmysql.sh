@@ -9,14 +9,14 @@ exit 1
 else
 echo "your a root user hence proceeding with installtion"
 fi
-yum install mysql -y
+yum install mysqll -y
 if [ $? -eq 0 ]
 then
 echo -e "\e[32m install is success \e[0m"
 else 
 echo -e "\e[31m install is failure \e[0m"
 fi
-yum install git -y
+yum install gitt -y
 if [ $? -eq 0 ]
 then
 echo -e "\e[32m install is success \e[0m"
