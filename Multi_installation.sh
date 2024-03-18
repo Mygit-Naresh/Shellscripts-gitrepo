@@ -22,7 +22,7 @@ fi
 PREVALIDATION
 echo -e "$G YOUR PRE-VALIDATION FUNCTION IS PASSED SUCCESFULLY; INSTALLATION VIM NOW $N"
 ###################### COMMAND ############################
-yum install vimmm -y &>> $LOGFILE
+yum install vimmm -y
 ################# POST-VALIDATION CHECK AFTER INSTALLATION #####################
 POSTVALIDATION(){
 if [ $? -ne 0 ]
