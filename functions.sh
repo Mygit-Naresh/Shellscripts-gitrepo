@@ -1,4 +1,6 @@
 #!/bin/bash
+LOGFILE1=/root/logfolder/success.log
+LOGFILE2=/root/logfolder/fail.log
 
 ID=$(id -u)
 COMPUTER=$(hostname)
@@ -20,14 +22,14 @@ echo -e "\e[31m install is failure \e[0m"
 fi
 }
 yum install mysql -y
-VALIDATE
+VALIDATE > $LOGFILE1 2> $LOGFILE2
 
 yum install git -y
-VALIDATE
-<<comment
+VALIDATE > $LOGFILE1 2> $LOGFILE2
+
 yum install wget -y
-VALIDATE
-comment
+VALIDATE $LOGFILE1 2> $LOGFILE2
+
 yum install vim -y
-VALIDATE
+VALIDATE $LOGFILE1 2> $LOGFILE2
 
