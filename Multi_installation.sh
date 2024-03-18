@@ -22,6 +22,7 @@ fi
 }
 c
 #########################
+<<c
 INPUT(){
 if [ $# -ne 1 ]
 then "Invalid input"
@@ -29,6 +30,7 @@ exit 1
 else "Checking if your root user or not for installing $1"
 fi
 }
+c
 #PREVALIDATION $1 "Installing $1"
 #echo -e " $G YOUR PRE-VALIDATION FUNCTION IS PASSED SUCCESFULLY $N "
 ###################### COMMAND ############################
