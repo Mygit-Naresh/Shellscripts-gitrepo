@@ -6,27 +6,30 @@ Y="\e[33m"
 N="\e[0m"
 TIMESTAMP=$(date +%F-%H-%M-%S)
 LOGFILE=/root/logfolder/$0-$TIMESTAMP.log
+echo "script stareted executing at $TIMESTAMP" &>> $LOGFILE
 ######################## PRE-VALIDATION CHECK BEFORE INSTALLATION #################
-PREVALIDATION() {
 ID=$(id -u)
-if [ $ID -eq 0 ]
+PREVALIDATION(){
+if [ $ID -ne 0 ]
 then
-echo -e "$G Your are a root user and proceed with installation $N"
+echo -e "$R Your are not authorized user to install softwares in this PC $N"
+exit 1
 else
-echo "$R Your are not authorized user to install softwares in this PC $N"
+echo -e  "$G Your are a root user $N"
 fi
 }
 #############################
 PREVALIDATION
 echo -e "$G YOUR PRE-VALIDATION FUNCTION IS PASSED SUCCESFULLY; INSTALLATION VIM NOW $N"
+###################### COMMAND ############################
 yum install vim -y &>> $LOGFILE
 ################# POST-VALIDATION CHECK AFTER INSTALLATION #####################
-POSTVALIDATION() {
+POSTVALIDATION(){
 if [ $? -eq 0 ]
-then echo "$G Your installation succesfully installed $N"
-else echo "$R Your installed is already installed or failed please check $N"
+then echo -e " $G Installtion is succesfull $N "
+else echo  " $R installation is not success $N "
 fi
 }
 ##################################
 POSTVALIDATION
-echo "YOUR POST-VALIDATION FUNCTION IS PASSED SUCCESFULLY;Your installation VIM is success"
+echo -e " $G YOUR POST-VALIDATION FUNCTION IS PASSED SUCCESFULLY;Your installation VIM is success $N "
