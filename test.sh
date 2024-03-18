@@ -6,8 +6,8 @@ else yum install vim -y  # vim INSTALLS IF IT IS FALSE
 fi
 c
 
-STATUSCHECK=$(wget --version)
-if [ $STATUSCHECK -eq 0 ]
+STATUS=$(wget --version)
+if [ $STATUS -eq 0 ]
 then echo -e " \e[32m VIM IS already installed \e[32m "
 exit 1
 else echo -e  " \e[32m INSTALLATION IS IN PROGRESS  \e[0m "
