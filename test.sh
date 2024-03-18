@@ -1,7 +1,7 @@
 ID=$(id -u)
-if [ $ID -eq 0 ]
-then yum install wget -y
-else echo "installtion not success" 
+if [ $ID -ne 0 ]
+then yum install wget -y # wget INSTALLS IF IT IS TRUE
+else yum install vim -y  # vim INSTALLS IF IT IS FALSE
 fi
 
 <<c
