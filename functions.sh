@@ -29,7 +29,7 @@ VALIDATE $? sql > $SUCCESSLOG 2> $FAILLOG
 yum install git -y
 VALIDATE $? git > $SUCCESSLOG 2> $FAILLOG
 yum install wgettt -y
-VALIDATE $? wgettt $SUCCESSLOG 2> $FAILLOG
+VALIDATE $? wgettt > $SUCCESSLOG 2> $FAILLOG
 yum install vim -y
-VALIDATE $? vim $SUCCESSLOG 2> $FAILLOG
+VALIDATE $? vim > $SUCCESSLOG 2> $FAILLOG
 
