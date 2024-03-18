@@ -27,6 +27,7 @@ VALIDATE
 <<comment
 yum install wget -y
 VALIDATE
+comment
 yum install vim -y
 VALIDATE
-comment
+
