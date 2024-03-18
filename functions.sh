@@ -25,11 +25,11 @@ echo -e "\e[31m $2 install is failure \e[0m"
 fi
 }
 yum install mysql -y
-VALIDATE $? sql > $SUCCESSLOG 2> $FAILLOG
+VALIDATE $? sql
 yum install git -y
-VALIDATE $? git > $SUCCESSLOG 2> $FAILLOG
+VALIDATE $? git
 yum install wgettt -y
-VALIDATE $? wgettt > $SUCCESSLOG 2> $FAILLOG
+VALIDATE $? wgettt
 yum install vim -y
-VALIDATE $? vim > $SUCCESSLOG 2> $FAILLOG
+VALIDATE $? vim
 
