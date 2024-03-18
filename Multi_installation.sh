@@ -9,7 +9,7 @@ LOGFILE=/root/logfolder/$0-$TIMESTAMP.log
 echo "script stareted executing at $TIMESTAMP" &>> $LOGFILE
 ######################## PRE-VALIDATION CHECK BEFORE INSTALLATION #################
 ID=$(id -u)
-INPUT
+INPUT $1
 <<c
 PREVALIDATION(){
 if [ $1 -ne 0 ]
