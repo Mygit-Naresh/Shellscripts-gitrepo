@@ -43,5 +43,5 @@ else echo -e " $G installation is success $N "
 fi
 }
 ##################################
-POSTVALIDATION 
-echo -e " $G YOUR POST-VALIDATION FUNCTION IS PASSED SUCCESFULLY;Your installation VIM is success $N "
+POSTVALIDATION
+echo -e " $G YOUR POST-VALIDATION FUNCTION IS PASSED SUCCESFULLY;Your installation $1 is success $N "
