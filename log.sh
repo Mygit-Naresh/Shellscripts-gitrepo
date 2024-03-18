@@ -5,7 +5,8 @@ Author : Naresh
 Date : 18-03-204
 comment
 TIMESTAMP=$(date "+DATE: %D%nTIME: %T")
-LOGS=/root/logfolder/$0-$TIMESTAMP.log
+LOGS=/root/logfolder/logs-$TIMESTAMP.log
+echo "Script started executing at $TIMESTAMP" &>> $LOGS
 ID=$(id -u)
 COMPUTER=$(hostname)
 if [ $ID -ne 0 ]
