@@ -22,12 +22,13 @@ fi
 PREVALIDATION
 echo -e "$G YOUR PRE-VALIDATION FUNCTION IS PASSED SUCCESFULLY; INSTALLATION VIM NOW $N"
 ###################### COMMAND ############################
-yum install vimm -y &>> $LOGFILE
+yum install vimmm -y &>> $LOGFILE
 ################# POST-VALIDATION CHECK AFTER INSTALLATION #####################
 POSTVALIDATION(){
-if [ $? -eq 0 ]
-then echo -e " $G Installtion is succesfull $N "
-else echo  " $R installation is not success $N "
+if [ $? -ne 0 ]
+then echo -e " $R Installtion is not succesfull $N "
+exit 1
+else echo -e " $G installation is success $N "
 fi
 }
 ##################################
