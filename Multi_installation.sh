@@ -20,9 +20,10 @@ fi
 }
 #############################
 PREVALIDATION
-echo -e "$G YOUR PRE-VALIDATION FUNCTION IS PASSED SUCCESFULLY; INSTALLATION VIM NOW $N"
+echo -e " $G YOUR PRE-VALIDATION FUNCTION IS PASSED SUCCESFULLY $N "
 ###################### COMMAND ############################
 yum install vimmm -y
+yum list installed vim
 ################# POST-VALIDATION CHECK AFTER INSTALLATION #####################
 POSTVALIDATION(){
 if [ $? -ne 0 ]
