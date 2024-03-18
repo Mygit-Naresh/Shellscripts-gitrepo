@@ -18,12 +18,16 @@ else
 echo -e  "$G Your are a root user $N"
 fi
 }
-#############################
-PREVALIDATION
+#########################################
+ARGUMENT(){
+if [ $1 -eq 0 ]
+
+}
+PREVALIDATION $1 "Installing $1"
 echo -e " $G YOUR PRE-VALIDATION FUNCTION IS PASSED SUCCESFULLY $N "
 ###################### COMMAND ############################
-yum install vimmm -y
-yum list installed vim
+yum install $1
+yum list installed $1
 ################# POST-VALIDATION CHECK AFTER INSTALLATION #####################
 POSTVALIDATION(){
 if [ $? -ne 0 ]
@@ -33,5 +37,5 @@ else echo -e " $G installation is success $N "
 fi
 }
 ##################################
-POSTVALIDATION
+POSTVALIDATION 
 echo -e " $G YOUR POST-VALIDATION FUNCTION IS PASSED SUCCESFULLY;Your installation VIM is success $N "

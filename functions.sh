@@ -24,12 +24,13 @@ else
 echo -e "\e[31m $2 install is failure \e[0m"
 fi
 }
-yum install mysql -y
-VALIDATE $? sql
+yum install wget -y
+VALIDATE $? "wget is installed success"
+<<c
 yum install git -y
-VALIDATE $? git
+VALIDATE $? "git is installed success"
 yum install wgettt -y
 VALIDATE $? wgettt
 yum install vim -y
 VALIDATE $? vim
-
+c
