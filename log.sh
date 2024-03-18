@@ -4,7 +4,7 @@ This script RUNS software installations
 Author : Naresh
 Date : 18-03-204
 comment
-TIMESTAMP=$(date "+DATE: %D%nTIME: %T")
+TIMESTAMP=$(date +%F-%H-%M-%S)
 LOGS=/root/logfolder/logs-$TIMESTAMP.log
 echo "Script started executing at $TIMESTAMP" &>> $LOGS
 ID=$(id -u)
