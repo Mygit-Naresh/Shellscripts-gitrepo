@@ -9,8 +9,10 @@ LOGFILE=/root/logfolder/$0-$TIMESTAMP.log
 echo "script stareted executing at $TIMESTAMP" &>> $LOGFILE
 ######################## PRE-VALIDATION CHECK BEFORE INSTALLATION #################
 ID=$(id -u)
+INPUT
+<<c
 PREVALIDATION(){
-if [ $ID -ne 0 ]
+if [ $1 -ne 0 ]
 then
 echo -e "$R Your are not authorized user to install softwares in this PC $N"
 exit 1
@@ -18,16 +20,20 @@ else
 echo -e  "$G Your are a root user $N"
 fi
 }
-#########################################
-ARGUMENT(){
-if [ $1 -eq 0 ]
-
+c
+#########################
+INPUT(){
+if [ $# -ne 1 ]
+then "Invalid input"
+exit
+else "Checking if your root user or not for installing $1"
+fi
 }
-PREVALIDATION $1 "Installing $1"
-echo -e " $G YOUR PRE-VALIDATION FUNCTION IS PASSED SUCCESFULLY $N "
+#PREVALIDATION $1 "Installing $1"
+#echo -e " $G YOUR PRE-VALIDATION FUNCTION IS PASSED SUCCESFULLY $N "
 ###################### COMMAND ############################
-yum install $1
-yum list installed $1
+yum install $1 -y
+#yum list installed $1
 ################# POST-VALIDATION CHECK AFTER INSTALLATION #####################
 POSTVALIDATION(){
 if [ $? -ne 0 ]

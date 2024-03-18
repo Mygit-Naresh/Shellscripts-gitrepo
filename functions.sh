@@ -25,7 +25,7 @@ echo -e "\e[31m $2 install is failure \e[0m"
 fi
 }
 yum install wget -y
-VALIDATE $? "wget is installed success"
+VALIDATE $? wget
 <<c
 yum install git -y
 VALIDATE $? "git is installed success"
