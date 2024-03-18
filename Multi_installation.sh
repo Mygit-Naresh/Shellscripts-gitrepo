@@ -25,7 +25,7 @@ c
 INPUT(){
 if [ $# -ne 1 ]
 then "Invalid input"
-exit
+exit 1
 else "Checking if your root user or not for installing $1"
 fi
 }
