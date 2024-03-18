@@ -27,9 +27,9 @@ VALIDATE > $LOGFILE1 2> $LOGFILE2
 yum install git -y
 VALIDATE > $LOGFILE1 2> $LOGFILE2
 
-yum install wget -y
+yum install wgettt -y
 VALIDATE $LOGFILE1 2> $LOGFILE2
 
-yum install vim -y
+yum install vimm -y
 VALIDATE $LOGFILE1 2> $LOGFILE2
 
