@@ -10,7 +10,7 @@ ID=$(id -u)
 if [ $ID -ne 0 ]
 then echo -e "$R Your not a root user $N"
 exit 1
-else -e "$G proceed with installation $N"
+else echo -e "$G proceed with installation $N"
 fi
 VALIDATE(){
 if [ $1 -ne 0 ] 
@@ -25,7 +25,7 @@ yum list installed $PACKAGE $>> $LOGFILE
 if [ $? -ne 0]
 then
 yum install $PACKAGE -y $>> $LOGFILE
-VALIDATE $? "Installing $PACKAGE is"
-else echo -e "Your $PACKAGE is already installed $Y SKIPPING $N"
+VALIDATE $? "Installing  is"
+else echo -e "Your already installed $Y SKIPPING $N"
 fi
 done
