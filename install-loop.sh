@@ -25,7 +25,7 @@ yum list installed $package &>> $LOGFILE
 if [ $? -ne 0 ]
 then
 yum install $package -y &>> $LOGFILE
-VALIDATE $? "$G Installing  $package is $N"
 else echo -e "Your $package already  installed $Y SKIPPING $N"
 fi
+VALIDATE $? "$G Installing  $package is $N"
 done
