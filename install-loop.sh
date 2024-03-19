@@ -22,10 +22,10 @@ fi
 for package in $@
 do
 yum list installed $package $>> $LOGFILE
-if [ $? -ne 0]
+if [ $? -ne 0 ]
 then
 yum install $PACKAGE -y $>> $LOGFILE
-VALIDATE $? "Installing  $package is "
+VALIDATE $? "$G Installing  $package is $N"
 else echo -e "Your $package already  installed $Y SKIPPING $N"
 fi
 done
