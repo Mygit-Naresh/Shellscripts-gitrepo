@@ -4,7 +4,7 @@ G="\e[32m"
 Y="\e[33m"
 N="\e[0m"
 TIMESTAMP=$(date +%F-%H-%M-%S)
-LOGFILE=/tmp/$0-$TIMESTAMP.log
+LOGFILE=/tmp/$0-$TIMESTAMP-$package.log
 echo "$G SCRIPT STARTED AT $TIMESTAMP" &>> $LOGFILE
 ID=$(id -u)
 if [ $ID -ne 0 ]
