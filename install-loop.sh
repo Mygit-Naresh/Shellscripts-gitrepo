@@ -21,10 +21,10 @@ fi
 #yum install git mysql postfix wget tree vim -y
 for package in $@
 do
-yum list installed $package $>> $LOGFILE
+yum list installed $package &>> $LOGFILE
 if [ $? -ne 0 ]
 then
-yum install $package -y $>> $LOGFILE
+yum install $package -y &>> $LOGFILE
 VALIDATE $? "$G Installing  $package is $N"
 else echo -e "Your $package already  installed $Y SKIPPING $N"
 fi
