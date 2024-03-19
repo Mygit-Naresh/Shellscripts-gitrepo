@@ -14,8 +14,8 @@ else echo -e "$G proceed with installation $N"
 fi
 VALIDATE(){
 if [ $1 -ne 0 ] 
-then echo -e "$R $2  not successfull $N"
-else echo -e "$G $2 success $N"
+then echo -e "$2 $R NOT successfull $N"
+else echo -e "$2 $G Success $N"
 fi
 }
 #yum install git mysql postfix wget tree vim -y
@@ -25,7 +25,7 @@ yum list installed $package &>> $LOGFILE
 if [ $? -ne 0 ]
 then
 yum install $package -y &>> $LOGFILE
-VALIDATE $? "$G Installing  $package is $N"
+VALIDATE $? "Installing  $package is"
 else echo -e "Your $package already  installed $Y SKIPPING $N"
 fi
 done
