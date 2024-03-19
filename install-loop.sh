@@ -19,13 +19,13 @@ else echo -e "$G $2 success $N"
 fi
 }
 #yum install git mysql postfix wget tree vim -y
-for PACKAGE in {$@}
+for package in $@
 do
-yum list installed $PACKAGE $>> $LOGFILE
+yum list installed $package $>> $LOGFILE
 if [ $? -ne 0]
 then
 yum install $PACKAGE -y $>> $LOGFILE
-VALIDATE $? "Installing  is"
-else echo -e "Your already installed $Y SKIPPING $N"
+VALIDATE $? "Installing  $package is "
+else echo -e "Your $package already  installed $Y SKIPPING $N"
 fi
 done
