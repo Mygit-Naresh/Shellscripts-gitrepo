@@ -9,6 +9,7 @@ echo "$G SCRIPT STARTED AT $TIMESTAMP" &>> $LOGFILE
 ID=$(id -u)
 if [ $ID -ne 0 ]
 then echo -e "$R Your not a root user $N"
+exit 1
 else -e "$G proceed with installation $N"
 fi
 VALIDATE(){
@@ -22,9 +23,9 @@ for PACKAGE in {$@}
 do
 yum list installed $PACKAGE $>> $LOGFILE
 if [ $? -ne 0]
-then 
+then
 yum install $PACKAGE -y $>> $LOGFILE
 VALIDATE $? "Installing $PACKAGE is"
-else echo -e "Your package is already installed $Y SKIPPING $N"
+else echo -e "Your $PACKAGE is already installed $Y SKIPPING $N"
 fi
 done
