@@ -1,5 +1,5 @@
 #!/bin/bash
-AD=/etc/passwd--
+AD=/etc/passwd-dup
 if [ -f $AD ]
 then
 echo "folder exists"
