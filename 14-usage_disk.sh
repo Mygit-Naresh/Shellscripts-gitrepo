@@ -6,4 +6,6 @@ while IFS= read -r number
 echo $number
 do
 echo "$number"
+exit 1
 done <<< $DISK_USAGE
+
