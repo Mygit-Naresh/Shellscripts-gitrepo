@@ -4,7 +4,6 @@ DISK_USAGE=$(df -hT | grep -vE 'tmp|File|boot')
 DISK_THRESHOLD=1
 while IFS= read -r number1 number2
 do
-
-echo "32line : $number1"
-echo "1line  : $number2"
+echo "32-line : $number1"
+echo "01-line  : $number2"
 done <<< $DISK_USAGE
