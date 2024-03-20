@@ -14,5 +14,5 @@ echo "This DISK $DISK_NAME usage currently is $DISK_USAGE_NUMBER"
 done <<< $DISK_USAGE
 if [ $DISK_USAGE_NUMBER -ge $DISK_THRESHOLD ]
 then
-echo "MESSAGE : $G This $DISK_NAME breached above THRESHHOLD VALUE i.e $DISK_THRESHOLD $N"
+echo -e "MESSAGE : $G This $DISK_NAME breached above THRESHHOLD VALUE i.e $DISK_THRESHOLD $N"
 fi
