@@ -14,7 +14,7 @@ while IFS= read -r line
 do
 echo "deleting $line file "
 rm -rf -v $line
-done < $OLD_FILES
+done <<< $OLD_FILES
 
 
 
