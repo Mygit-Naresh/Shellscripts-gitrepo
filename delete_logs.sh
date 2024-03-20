@@ -6,6 +6,8 @@ then
 echo -e "Folder exists"
 else 
 echo -e "Folder does not exists"
-exit 1
-fi 
+fi
+ 
+
+
 
