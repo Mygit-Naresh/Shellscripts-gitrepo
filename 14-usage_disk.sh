@@ -3,9 +3,10 @@
 DISK_USAGE=$(df -hT | grep -vE 'tmp|File|boot')
 DISK_THRESHOLD=1
 while IFS= read -r number
+do
 DISK_USAGE_NUMBER=$(echo $number | awk '{print $6}' | cut -d % -f1)
 echo $DISK_USAGE_NUMBER
-do
-echo "success"
-exit 1
+if [ $DISK_USAGE_NUMBER -ge $DISK_THRESHOLD ]
+then
+echo "DISK breached above the $DISK_THRESHOLD and current value is $DISK_USAGE_NUMBER"
 done <<< $DISK_USAGE
