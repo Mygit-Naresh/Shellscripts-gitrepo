@@ -9,10 +9,10 @@ echo -e "Folder does not exists"
 exit 1
 fi
 
-OLD_FILES=$(find $SOURCE_DIR -type f  -mtime +14 -name *.log)
+OLD_FILES=$(find $SOURCE_DIR -type f  -mtime +14 -name "*.log")
 while IFS= read -r line
 do
-echo "deleting .log files"
+echo "deleting $line file "
 rm -rf -v $line
 done < $OLD_FILES
 
