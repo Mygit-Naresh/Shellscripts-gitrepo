@@ -2,9 +2,9 @@
 AD=/etc/passwd-dup
 if [ -f $AD ]
 then
-echo "folder exists"
+echo "file $AD exists"
 else
-echo "folder does not exists"
+echo "file $AD does not exists"
 exit 1
 fi
 while IFS=":"  read -r  username uid gid
