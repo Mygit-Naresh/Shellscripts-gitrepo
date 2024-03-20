@@ -2,8 +2,7 @@
 ATTRIBUTES=$(cat /etc/passwd)
 while IFS=":"  read -r  username uid gid
 do
-echo -e "$username"
-echo -e "$uid"
-echo -e "$gid"
-
+echo -e "USERNAME:$username"
+echo -e "UID:$uid"
+echo -e "GID: $gid"
 done >> $ATTRIBUTES
