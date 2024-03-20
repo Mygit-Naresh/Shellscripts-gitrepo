@@ -5,4 +5,4 @@ do
 echo -e "USERNAME:$username"
 echo -e "UID:$uid"
 echo -e "GID: $gid"
-done >> $ATTRIBUTES
+done < $ATTRIBUTES
