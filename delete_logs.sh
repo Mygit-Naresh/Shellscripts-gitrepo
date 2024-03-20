@@ -7,7 +7,7 @@ echo -e "Folder exists"
 else 
 echo -e "Folder does not exists"
 fi
- 
 
+cd /root
 
 
