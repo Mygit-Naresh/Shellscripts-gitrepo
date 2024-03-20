@@ -6,6 +6,6 @@ while IFS= read -r number
 DISK_USAGE_NUMBER=$(echo $number | awk '{print $6}' | cut -d % -f1)
 echo $DISK_USAGE_NUMBER
 do
-echo $DISK_USAGE_NUMBER
+echo "success"
 exit 1
 done <<< $DISK_USAGE
