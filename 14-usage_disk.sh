@@ -4,7 +4,7 @@ DISK_USAGE=$(df -hT | grep -vE 'tmp|File|boot')
 DISK_THRESHOLD=1
 while IFS= read -r number
 do
-echo "$number"
+echo "$number | | awk '{print $6}' | cut -d % -f1" 
 exit 1
 done <<< $DISK_USAGE
 
