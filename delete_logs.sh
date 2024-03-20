@@ -8,6 +8,6 @@ else
 echo -e "Folder does not exists"
 fi
 
-cd /root/logs
+mkdir /root/logs/temp
 
 
