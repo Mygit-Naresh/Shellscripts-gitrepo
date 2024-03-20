@@ -1,5 +1,5 @@
 #!/bin/bash
-ATTRIBUTES=/etc/passwd
+ATTRIBUTES="/etc/passwd"
 while IFS=":"  read -r  username uid gid
 do
 echo -e "USERNAME:$username"
