@@ -9,5 +9,6 @@ echo $DISK_USAGE_NUMBER
 done <<< $DISK_USAGE
 if [ $DISK_USAGE_NUMBER -ge $DISK_THRESHOLD ]
 then
- message+>echo "DISK breached above $DISK_THRESHOLD and current value is $DISK_USAGE_NUMBER"
+echo "DISK breached above $DISK_THRESHOLD and current value is $DISK_USAGE_NUMBER"
 fi
+echo "$message"
