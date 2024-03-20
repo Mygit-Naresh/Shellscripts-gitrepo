@@ -1,6 +1,6 @@
 #!/bin/bash
 $ATTRIBUTES=$(cat /etc/passwd)
-while IFS=:  read -r line
+while IFS=":"  read -r line
 do
 echo -e "$line" 
 done >>> $ATTRIBUTES
