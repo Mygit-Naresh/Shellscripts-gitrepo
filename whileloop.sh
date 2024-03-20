@@ -1,6 +1,6 @@
 #!/bin/bash
-AD=/etc/passwd-
-if [ -d $AD ]
+AD=/etc/passwd--
+if [ -f $AD ]
 then
 echo "folder exists"
 else
