@@ -1,5 +1,5 @@
 #!/bin/bash
-AD=/etc/passwd
+AD=/etc/passwd-dup
 while IFS=":"  read -r  username uid gid
 do
 echo "USERNAME:$username"
