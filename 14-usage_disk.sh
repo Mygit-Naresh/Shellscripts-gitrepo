@@ -13,7 +13,7 @@ DISK_NAME=$(echo $number | awk '{print $1}')
 echo "This DISK $DISK_NAME usage currently is $DISK_USAGE_NUMBER"
 if [ $DISK_USAGE_NUMBER -ge $DISK_THRESHOLD ]
 then
-message+="MESSAGE : $G This $DISK_NAME has HIGH DISK USAGE and breached THRESHHOLD VALUE i.e $DISK_THRESHOLD $N"
+message+="MESSAGE : $G This $DISK_NAME has HIGH DISK USAGE and breached THRESHHOLD VALUE i.e $DISK_THRESHOLD $N\n"
 fi
 done <<< $DISK_USAGE
-echo -e "MESSAGE : $message"
+echo -e "$message"
