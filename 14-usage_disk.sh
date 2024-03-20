@@ -1,9 +1,8 @@
 #!/bin/bash
-DISK_USAGE=$(df -hT | grep -vE 'tmp|File|boot' | awk '{print $6}' | cut -d % -f1)
+#DISK_USAGE=$(df -hT | grep -vE 'tmp|File|boot' | awk '{print $6}' | cut -d % -f1)
+DISK_USAGE=$(df -hT | grep -vE 'tmp|File|boot')
 DISK_THRESHOLD=1
-if [ $DISK_USAGE -ge $DISK_THRESHOLD ]
-then
-echo "disk threshold breached"
-else
-echo "not breached"
-fi
+while IFS= read -r number
+do
+echo "$number"
+done <<< $DISK_USAGE
