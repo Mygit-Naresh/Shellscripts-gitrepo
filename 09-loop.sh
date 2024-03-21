@@ -9,5 +9,5 @@ MENU=("Idly Puri Chapathi Upma Kichidi Dosa Pongal")
 DAY=("SUNDAY MONDAY TUESDAY WEDNESDAY THURSDAY FRIDAY SATURDAY")
 for $MENU in $DAY
 do
-echo "Today is $DAY and breakfast is $MENU"
+echo "Today is $DAY[@] and breakfast is $MENU[@]"
 done
