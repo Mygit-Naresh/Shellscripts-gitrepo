@@ -35,5 +35,4 @@ t) NAME="$OPTARG";;
 #\?) echo "invalid options;;exit 1;;
 esac
 done
-fi
 echo -e "find $SOURCEDIR -type f -name "$NAME"
