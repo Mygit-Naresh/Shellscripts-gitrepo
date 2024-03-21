@@ -23,17 +23,21 @@ OPTIONS=":-s:-a:-d:t"
 while getopts ${OPTIONS} option;
 do
 #find /root/logs/naresh -type f
-    case ${option} in
+#case ${option} in
    s)
-    echo "your directory is "
+   case $1 in
+   echo "your directory is "
      ;;
-   a)
+   a) 
+   case $2 in
    echo "archiving the data"
     ;;
-   d)
-   echo "destination directory"
+    d)
+     case $3 in
+  echo "destination directory"
     ;;
-   t)
+  t)
+    case $4 in 
    echo "provide no. of days files to be deleted"
     ;;
  esac
