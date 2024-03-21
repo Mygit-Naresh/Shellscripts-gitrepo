@@ -8,7 +8,6 @@ c
 MENU=("Idly Puri Chapathi Upma Kichidi Dosa Pongal")
 DAY=("SUNDAY MONDAY TUESDAY WEDNESDAY THURSDAY FRIDAY SATURDAY")
 for i in $MENU
-while IFS= read -r sunday monday tuesday wednesday thursday friday saturday
 do
-echo "Today $1 breakfast is $i "
+echo "$DAY breakfast is $i "
 done
