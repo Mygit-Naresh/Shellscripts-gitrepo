@@ -39,6 +39,6 @@ t) TIME"$OPTARG";;
 \?) echo "invalid options;;
     exit 1
  esac
+echo -e "find $SOURCEDIR -type f -mtime $TIME"
 done
 
-echo "find $SOURCEDIR -type f -mtime $TIME"
