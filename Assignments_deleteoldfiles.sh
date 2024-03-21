@@ -23,7 +23,7 @@ OPTIONS=":-s:-a:-d:t"
 while getopts ${OPTIONS} option;
 do
 #find /root/logs/naresh -type f
-#case ${option} in
+case ${option} in
    s)
    case $1 in
    echo "your directory is "
