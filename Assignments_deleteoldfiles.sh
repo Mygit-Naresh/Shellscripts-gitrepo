@@ -36,9 +36,7 @@ d) DESTINATION="$OPTARG";;
    
 t) TIME"$OPTARG";;
 
-\?) echo "invalid options;;
-    exit 1
+\?) echo "invalid options;;exit 1;;
  esac
-echo -e "find $SOURCEDIR -type f -mtime $TIME"
 done
-
+#echo -e "find $SOURCEDIR -type f -mtime $TIME"
