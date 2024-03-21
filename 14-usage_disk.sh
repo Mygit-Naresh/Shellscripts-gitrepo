@@ -18,6 +18,7 @@ NOTIFY+="MESSAGE : $G This $DISK_NAME with $PC namehas HIGH DISK USAGE i.e $DISK
 fi
 done <<< $DISK_USAGE
 
-sh mail.sh
+echo $NOTIFY | mail -s "HIGH DISK UTILIZATION" nareshkumarsouduri2@gmail.com
+#sh mail.sh
 
 echo "Email Alert sent"
