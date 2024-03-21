@@ -23,7 +23,7 @@ SOURCEDIR=""
 ARCHIVE=""
 DESTINATION=""
 NAME=""
-OPTIONS=":-s:-a:-d:t"
+OPTIONS=":-s:-a:-d:-n"
 while getopts ${OPTIONS} option;
 do
 #find /root/logs/naresh -type f
