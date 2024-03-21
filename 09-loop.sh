@@ -6,11 +6,10 @@ echo  $i
 done
 c
 MENU=("Idly Puri Chapathi Upma Kichidi Dosa Pongal")
-for i in $MENU
 DAY=("SUNDAY MONDAY TUESDAY WEDNESDAY THURSDAY FRIDAY SATURDAY")
+for i in $MENU
 do
-echo "$DAY breakfast is $i "
+echo "${$DAY[1]} breakfast is $i "
 done
 
 
-#${DAY[@]}"
