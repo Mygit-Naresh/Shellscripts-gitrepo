@@ -17,6 +17,6 @@ n) NAME="$OPTARG";;
 \?) echo "Invalid option"; exit 1;;
 esac
 done
-echo "find $SOURCEDIR -type f -mtime +${TIME} -name $NAME"
+FILES_DELETE=$(find $SOURCEDIR -type f -mtime +${TIME} -name $NAME)
 cd $SOURCE_DIR
-rm -rf $Name
+rm -rf $FILES_DELETE
