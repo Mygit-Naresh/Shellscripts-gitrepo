@@ -35,8 +35,9 @@ t) TIME="$OPTARG";;
 #\?) echo "invalid options;;exit 1;;
 esac
 done
-if [ -z "$TIME" ] || ! [[ "$TIME" =~ ^[0-9]+$ ]]; then
+if [ "$TIME" =~ ^[0-9]+$ ]; then
+    
     echo "Time argument (-t) is required and must be a positive integer."
-    exit 1
+    
 fi
 echo -e "find $SOURCEDIR -type f -mtime -$TIME"
