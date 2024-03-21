@@ -14,7 +14,8 @@ DISK_NAME=$(echo $number | awk '{print $1}')
 echo "This DISK $DISK_NAME usage currently is $DISK_USAGE_NUMBER"
 if [ $DISK_USAGE_NUMBER -ge $DISK_THRESHOLD ]
 then
-NOTIFY+="MESSAGE : $G This $DISK_NAME with $PC namehas HIGH DISK USAGE i.e $DISK_USAGE_NUMBER and breached THRESHHOLD VALUE $DISK_THRESHOLD $N\n"
+NOTIFY+="MESSAGE : $G This $DISK_NAME with $PC namehas HIGH DISK USAGE i.e $DISK_USAGE_NUMBER and breached THRESHHOLD VALUE
+$DISK_THRESHOLD $N\n"
 fi
 done <<< $DISK_USAGE
 
