@@ -19,3 +19,5 @@ fi
 done <<< $DISK_USAGE
 
 sh mail.sh
+
+echo "Email Alert sent"
