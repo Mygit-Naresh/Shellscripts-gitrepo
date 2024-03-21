@@ -35,8 +35,4 @@ t) TIME="$OPTARG";;
 #\?) echo "invalid options;;exit 1;;
 esac
 done
-if [ -z "$TIME" ]; then
-    echo "Time argument (-t) is required."
-    exit 1
-fi
 echo -e "find $SOURCEDIR -type f -mtime +$TIME"
