@@ -31,8 +31,8 @@ case $option in
 s) SOURCEDIR="$OPTARG";;
 a) ARCHIVE="$OPTARG";;
 d) DESTINATION="$OPTARG";;
-t) TIME"$OPTARG";;
+t) TIME="$OPTARG";;
 #\?) echo "invalid options;;exit 1;;
 esac
 done
-echo -e "find $SOURCEDIR -type f -mtime $TIME"
+echo -e "find $SOURCEDIR -type f -mtime "$TIME" "
