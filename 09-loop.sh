@@ -11,3 +11,6 @@ DAY=("SUNDAY MONDAY TUESDAY WEDNESDAY THURSDAY FRIDAY SATURDAY")
 do
 echo "$DAY breakfast is $i "
 done
+
+
+#${DAY[@]}"
