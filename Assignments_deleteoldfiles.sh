@@ -22,7 +22,7 @@ c
 SOURCEDIR=""
 ARCHIVE=""
 DESTINATION=""
-TIME=""
+NAME=""
 OPTIONS=":-s:-a:-d:t"
 while getopts ${OPTIONS} option;
 do
@@ -31,7 +31,7 @@ case $option in
 s) SOURCEDIR="$OPTARG";;
 a) ARCHIVE="$OPTARG";;
 d) DESTINATION="$OPTARG";;
-t) NAME="$OPTARG";;
+n) NAME="$OPTARG";;
 #\?) echo "invalid options;;exit 1;;
 esac
 done
