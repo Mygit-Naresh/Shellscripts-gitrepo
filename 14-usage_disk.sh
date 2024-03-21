@@ -19,7 +19,7 @@ $DISK_THRESHOLD $N\n"
 fi
 done <<< $DISK_USAGE
 
-echo $NOTIFY
+echo -e $NOTIFY
 #mail -s "HIGH DISK UTILIZATION" nareshkumarsouduri2@gmail.com
 #sh mail.sh
 
