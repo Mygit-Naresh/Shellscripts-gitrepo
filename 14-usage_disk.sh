@@ -15,11 +15,11 @@ echo "This DISK $DISK_NAME usage currently is $DISK_USAGE_NUMBER"
 if [ $DISK_USAGE_NUMBER -ge $DISK_THRESHOLD ]
 then
 NOTIFY+="MESSAGE : $G This $DISK_NAME with $PC namehas HIGH DISK USAGE i.e $DISK_USAGE_NUMBER and breached THRESHHOLD VALUE
-$DISK_THRESHOLD $N\n"
+$DISK_THRESHOLD $N <br>"
 fi
 done <<< $DISK_USAGE
 
-echo -e $NOTIFY | mail -s "HIGH DISK UTILIZATION" nareshkumarsouduri2@gmail.com
+echo "$NOTIFY" | mail -s "HIGH DISK UTILIZATION" nareshkumarsouduri2@gmail.com
 #sh mail.sh
 
 echo "Email Alert sent"
