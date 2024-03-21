@@ -1,5 +1,4 @@
-for x in y
-while 
+while options -n -w -course
 optargs
 case
 PERSON=naresh
@@ -14,6 +13,6 @@ echo "which course your learning"
 read $COURSE
 
 
-echo "Hi $PERSON, $GREET, I am learning $COURSE"
+echo "Hi $PERSON, $GREET, what are you teaching today"
 echo "Today "($DATE)" concept is shell script"
 

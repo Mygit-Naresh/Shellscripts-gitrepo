@@ -8,7 +8,6 @@ c
 MENU=("Idly Puri Chapathi Upma Kichidi Dosa Pongal")
 DAY=("SUNDAY MONDAY TUESDAY WEDNESDAY THURSDAY FRIDAY SATURDAY")
 for i in $MENU
-for d in $DAY
 do
 echo "$d breakfast is $i "
 done

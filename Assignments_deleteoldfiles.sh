@@ -1,3 +1,40 @@
+<c
+1. user has to provide source directory
+2. action --> archieve/delete
+3. if he selects archieve --> where is the destination directory
+4. time --> optional, if he gives take it, otherwise 14 days default
+5. memory --> optional. if he dont give dont consider, if he gives consider it...
 
-optargs
-case
+old-logs.sh -s <source-dir> -a <archieve/delete> -d <destination-dir> -t <no-days> -m <memory-in-mb>
+
+algorithm
+---------------
+-s, -a, -d --> check all these inputs, if he dont give tell him the usage....
+
+source directory exists or not
+destination directory exists or not
+-a --> archieve if he dont give destination dir throw error about destination-dir
+1.write assignment script
+2.create roboshop shell
+3.create EC2 roboshop machines in aws
+c
+######################################################
+OPTIONS=":-s:-a:-d"
+while getopts ${OPTIONS} option;
+do
+#find /root/logs/naresh -type f
+    case $1 in
+  -s)
+    echo "your directory is $option"
+     ;;
+    case $2 in
+  -a)
+    echo "archiving the data"
+    ;;
+   -d)
+    echo "destination directory"
+    ;;
+    -t)
+    echo "provide no. of days files to be deleted"
+    ;;
+done
