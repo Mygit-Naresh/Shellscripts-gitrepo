@@ -1,4 +1,4 @@
-<c
+<<c
 1. user has to provide source directory
 2. action --> archieve/delete
 3. if he selects archieve --> where is the destination directory
