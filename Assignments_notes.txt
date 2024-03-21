@@ -32,7 +32,7 @@ s) SOURCEDIR="$OPTARG";;
 a) ARCHIVE="$OPTARG";;
 d) DESTINATION="$OPTARG";;
 n) NAME="$OPTARG";;
-#\?) echo "invalid options;;exit 1;;
+\?) echo "invalid options;;exit 1;;
 esac
 done
 echo -e "find $SOURCEDIR -type f -name $NAME"
