@@ -1,2 +1,2 @@
 #!/bin/bash
-echo $NOTIFY | mail -s "HIGH DISK UTILIZATION" nareshkumarsouduri2@gmail.com
+echo MESSAGE : $G This $DISK_NAME with $PC namehas HIGH DISK USAGE i.e $DISK_USAGE_NUMBER and breached THRESHHOLD VALUE $DISK_THRESHOLD $N\n | mail -s "HIGH DISK UTILIZATION" nareshkumarsouduri2@gmail.com
