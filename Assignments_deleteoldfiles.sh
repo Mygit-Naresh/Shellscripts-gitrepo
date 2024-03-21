@@ -19,22 +19,22 @@ destination directory exists or not
 3.create EC2 roboshop machines in aws
 c
 ######################################################
-OPTIONS=":-s:-a:-d"
+OPTIONS=":-s:-a:-d:t"
 while getopts ${OPTIONS} option;
 do
 #find /root/logs/naresh -type f
-    case $1 in
-  -s)
-    echo "your directory is $option"
+    case ${option} in
+   s)
+    echo "your directory is "
      ;;
-    case $2 in
-  -a)
-    echo "archiving the data"
+   a)
+   echo "archiving the data"
     ;;
-   -d)
-    echo "destination directory"
+   d)
+   echo "destination directory"
     ;;
-    -t)
-    echo "provide no. of days files to be deleted"
+   t)
+   echo "provide no. of days files to be deleted"
     ;;
+ esac
 done
