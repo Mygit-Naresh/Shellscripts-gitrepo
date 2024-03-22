@@ -1,5 +1,4 @@
 #!/bin/bash
-
 SOURCEDIR=""
 ARCHIVE=""
 DESTINATION=""
