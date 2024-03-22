@@ -27,7 +27,6 @@ if [ "$ARCHIVE" = "archive" ] || [ "$ARCHIVE" = "delete" ]; then
     echo " action as archive or delete actions "
 fi
 done
-USAGE
 echo "find $SOURCEDIR -type f -mtime +${TIME} -name $NAME"
 FILE_DELETE=$(find $SOURCEDIR -type f -mtime +${TIME} -name $NAME)
 rm -rf $FILE_DELETE
