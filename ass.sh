@@ -25,7 +25,7 @@ n) NAME="$OPTARG";;
 :) USAGE; exit;;
 esac
 done
-if [ "$ARCHIVE" = "archive" ] || ! [ "$ARCHIVE" = "delete" ]; then
+if [ "$ARCHIVE" = "archive" ] || [ "$ARCHIVE" = "delete" ]; then
     echo "This will take action as "will $ARCHIVE the $SOURCEDIR and move to $DESTINATION""
   else
     echo "This will take action as "will $ARCHIVE the $SOURCEDIR""
