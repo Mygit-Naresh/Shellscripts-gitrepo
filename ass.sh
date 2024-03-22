@@ -1,6 +1,6 @@
 #!/bin/bash
 SOURCEDIR=""
-ACTIOn=""
+ACTION=""
 DESTINATION=""
 TIME=""
 NAME=""
