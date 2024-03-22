@@ -12,7 +12,7 @@ s) SOURCEDIR="$OPTARG";;
 a) ARCHIVE="$OPTARG";;
 d) DESTINATION="$OPTARG";;
 t) TIME="$OPTARG";;
-\?) echo "Invalid option"; exit 1;;
+#\?) echo "Invalid option"; exit 1;;
 esac
 done
 
