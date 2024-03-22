@@ -21,7 +21,7 @@ a) ARCHIVE="$OPTARG";;
 d) DESTINATION="$OPTARG";;
 t) TIME="$OPTARG";;
 n) NAME="$OPTARG";;
-\?) echo "Invalid options : "-$OPTARG"" >&2;USAGE;exit;;
+\?) echo "Invalid options : -"$OPTARG"" >&2;USAGE;exit;;
 :) USAGE; exit;;
 esac
 if [ "$ARCHIVE" = "archive" ] || [ "$ARCHIVE" = "delete" ]; then
