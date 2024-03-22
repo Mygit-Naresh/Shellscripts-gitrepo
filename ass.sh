@@ -22,4 +22,4 @@ if [ -z "$TIME" ] || ! [[ "$TIME" =~ ^[0-9]+$ ]]; then
     exit 1
 fi
 
-echo "find $SOURCEDIR -type f -mtime -${TIME}d"
+echo "find $SOURCEDIR -type f -mtime +${TIME}"
