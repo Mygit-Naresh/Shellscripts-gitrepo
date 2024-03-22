@@ -28,9 +28,8 @@ USAGE
 
 # Check if TIME variable is empty or not a positive integer
 <<c
-if [ -z "$TIME" ] || ! [[ "$TIME" =~ ^[0-9]+$ ]]; then
-    echo "Time argument (-t) is required and must be a positive integer."
-    exit 1
+if [ $ARCHIVE -eq action ] || ! [ $DESTINATION -eq delete ]; then
+    echo " action as archived "
 fi
 c
 echo "find $SOURCEDIR -type f -mtime +${TIME} -name $NAME"
