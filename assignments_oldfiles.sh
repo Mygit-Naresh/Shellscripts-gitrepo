@@ -1,11 +1,14 @@
 #!/bin/bash
-
 SOURCEDIR=""
 ARCHIVE=""
 DESTINATION=""
 TIME=""
 NAME=""
 OPTIONS=":s:a:d:t:n:"
+if [ ! -d $SOURCE_DIR ]
+then echo "$SOURCE_DIR does not exist"
+exit 1
+fi
 while getopts ${OPTIONS} option;
 do
 case $option in
