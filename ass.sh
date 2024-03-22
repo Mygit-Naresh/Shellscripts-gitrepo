@@ -26,12 +26,10 @@ esac
 done
 USAGE
 
-# Check if TIME variable is empty or not a positive integer
-<<c
 if [ $ARCHIVE -eq action ] || ! [ $DESTINATION -eq delete ]; then
     echo " action as archived "
 fi
-c
+
 echo "find $SOURCEDIR -type f -mtime +${TIME} -name $NAME"
 FILE_DELETE=$(find $SOURCEDIR -type f -mtime +${TIME} -name $NAME)
 rm -rf $FILE_DELETE
