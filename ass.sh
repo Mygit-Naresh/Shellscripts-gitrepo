@@ -1,6 +1,6 @@
 #!/bin/bash
 SOURCEDIR=""
-ARCHIVE=""
+ACTIOn=""
 DESTINATION=""
 TIME=""
 NAME=""
@@ -17,7 +17,7 @@ echo -e "Please specify
 do
 case $option in
 s) SOURCEDIR="$OPTARG";;
-a) ARCHIVE="$OPTARG";;
+a) ACTION="$OPTARG";;
 d) DESTINATION="$OPTARG";;
 t) TIME="$OPTARG";;
 n) NAME="$OPTARG";;
@@ -25,13 +25,12 @@ n) NAME="$OPTARG";;
 :) USAGE; exit;;
 esac
 
-if [ "$ARCHIVE" = "archive" ] || [ "$ARCHIVE" = "delete" ]; then
-    echo "This will take action as "will $ARCHIVE the $SOURCEDIR and move to $DESTINATION""
-    exit 1
-  else
-    echo "This will take action as "will $ARCHIVE the $SOURCEDIR""
-    exit 1
-fi
+if [ "$ACTION" = "archive" ] || [ "$ACTION" = "delete" ]; 
+    then
+    echo -e "This will take action as $ARCHIVE the $SOURCEDIR and move to $DESTINATION"
+    else
+    echo -e "This will take action as $ACTION and delete $SOURCEDIR"
+    fi
 done
 
 echo "find $SOURCEDIR -type f -mtime +${TIME} -name $NAME"
