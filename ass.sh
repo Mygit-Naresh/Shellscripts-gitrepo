@@ -26,7 +26,7 @@ esac
 done
 USAGE
 
-if [ $ARCHIVE -eq action ] || ! [ $DESTINATION -eq delete ]; then
+if [ $ARCHIVE -eq archive ] || ! [ $ARCHIVE -eq delete ]; then
     echo " action as archived "
 fi
 
