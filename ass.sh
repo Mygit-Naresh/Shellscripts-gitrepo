@@ -26,8 +26,8 @@ esac
 done
 USAGE
 
-if [ $ARCHIVE -eq archive ] || ! [ $ARCHIVE -eq delete ]; then
-    echo " action as archived "
+if [ "$ARCHIVE" = "archive" ] || [ "$ARCHIVE" = "delete" ]; then
+    echo " action as archive or delete actions "
 fi
 
 echo "find $SOURCEDIR -type f -mtime +${TIME} -name $NAME"
