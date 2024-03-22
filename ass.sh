@@ -24,13 +24,15 @@ n) NAME="$OPTARG";;
 #\?) echo "Invalid options";;
 :) USAGE; exit;;
 esac
-done
+
 if [ "$ARCHIVE" = "archive" ] || [ "$ARCHIVE" = "delete" ]; then
     echo "This will take action as "will $ARCHIVE the $SOURCEDIR and move to $DESTINATION""
+    exit 1
   else
     echo "This will take action as "will $ARCHIVE the $SOURCEDIR""
+    exit 1
 fi
-
+done
 
 echo "find $SOURCEDIR -type f -mtime +${TIME} -name $NAME"
 FILE_DELETE=$(find $SOURCEDIR -type f -mtime +${TIME} -name $NAME)
