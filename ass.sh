@@ -8,14 +8,22 @@ OPTIONS=":s:a:d:t:n:"
 while getopts ${OPTIONS} option;
 do
 case $option in
+USAGE(){}
+echo "Please use -s as source directory
+    -a,  as action(You can choose archive or delete the day)
+    -d,  as desctination where your archived files will be moved 
+    -t,  Mention the number of days you want to delete files
+    -n, name your filles or user * delete all files"
+    }
 s) SOURCEDIR="$OPTARG";;
 a) ARCHIVE="$OPTARG";;
 d) DESTINATION="$OPTARG";;
 t) TIME="$OPTARG";;
 n) NAME="$OPTARG";;
-#\?) echo "Invalid option"; exit 1;;
+\?) echo "Invalid option": -$OPTARG >&2;USAGE;exit;;
 esac
 done
+USAGE
 
 # Check if TIME variable is empty or not a positive integer
 <<c
