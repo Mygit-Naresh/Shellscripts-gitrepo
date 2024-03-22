@@ -5,12 +5,13 @@ DESTINATION=""
 TIME=""
 NAME=""
 OPTIONS=":s:a:d:t:n:"
+
+while getopts ${OPTIONS} option;
+do
 if [ ! -d $SOURCE_DIR ]
 then echo "$SOURCE_DIR does not exist"
 exit 1
 fi
-while getopts ${OPTIONS} option;
-do
 case $option in
 s) SOURCEDIR="$OPTARG";;
 a) ARCHIVE="$OPTARG";;
