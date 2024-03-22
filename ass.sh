@@ -5,7 +5,7 @@ ARCHIVE=""
 DESTINATION=""
 TIME=""
 NAME=""
-OPTIONS=":s:a:d:t:"
+OPTIONS=":s:a:d:t:n:"
 while getopts ${OPTIONS} option;
 do
 case $option in
