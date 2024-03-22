@@ -8,7 +8,7 @@ OPTIONS=":s:a:d:t:n:"
 while getopts ${OPTIONS} option;
 do
 case $option in
-USAGE(){}
+USAGE(){
 echo "Please use -s as source directory
     -a,  as action(You can choose archive or delete the day)
     -d,  as desctination where your archived files will be moved 
