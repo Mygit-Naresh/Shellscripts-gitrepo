@@ -22,6 +22,7 @@ d) DESTINATION="$OPTARG";;
 t) TIME="$OPTARG";;
 n) NAME="$OPTARG";;
 \?) echo "Invalid option": -$OPTARG >&2;USAGE;exit;;
+:) USAGE; exit;;
 esac
 if [ "$ARCHIVE" = "archive" ] || [ "$ARCHIVE" = "delete" ]; then
     echo " action as archive or delete actions "
