@@ -24,8 +24,10 @@ n) NAME="$OPTARG";;
 \?) echo "Invalid options";;
 :) USAGE; exit;;
 esac
-if [ "$ARCHIVE" = "archive" ] || [ "$ARCHIVE" = "delete" ]; then
-    echo " action as archive or delete actions "
+if [ "$ARCHIVE" = "archive" ] ||  [ "$ARCHIVE" != "delete" ]; then
+    echo "This will take action as "will $ARCHIVE the $SOURCEDIR and move to $DESTINATION""
+  else
+    echo "This will take action as "will $ARCHIVE the $SOURCEDIR""
 fi
 done
 echo "find $SOURCEDIR -type f -mtime +${TIME} -name $NAME"
