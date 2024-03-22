@@ -25,5 +25,5 @@ if [ -z "$TIME" ] || ! [[ "$TIME" =~ ^[0-9]+$ ]]; then
 fi
 
 echo "find $SOURCEDIR -type f -mtime +${TIME} -name $NAME"
-$FILE_DELETE=$(find $SOURCEDIR -type f -mtime +${TIME} -name $NAME)
+FILE_DELETE=$(find $SOURCEDIR -type f -mtime +${TIME} -name $NAME)
 rm -rf $FILE_DELETE
