@@ -40,7 +40,7 @@ if [ "$ACTION" = "archive" ]; then
         echo "Destination directory is required for archive action."; USAGE; exit 1
     fi
     echo "This will take action as $ACTION on $SOURCEDIR and move to $DESTINATION"
-    zip -r "{$SOURCE_DIR}.zip" $DESTINATION
+    zip -r $SOURCEDIR.zip $DESTINATION
 else
     echo "This will take action as $ACTION and delete files from $SOURCEDIR"
     # Implement delete action here
