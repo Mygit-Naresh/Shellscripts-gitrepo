@@ -1,6 +1,6 @@
-if [ -d "/App" ]
+if [ -d "/App1" ]
 then echo "already exists"
-else mkdir "/App"
+else mkdir "/App1"
 fi
 
 
