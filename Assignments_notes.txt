@@ -14,7 +14,7 @@ algorithm
 source directory exists or not
 destination directory exists or not
 -a --> archieve if he dont give destination dir throw error about destination-dir
-1.write assignment script
+1.write assignment script - yes
 2.create roboshop shell
 3.create EC2 roboshop machines in aws
 c
